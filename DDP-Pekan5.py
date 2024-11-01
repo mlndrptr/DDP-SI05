@@ -1,1 +1,49 @@
-{"cells":[{"cell_type":"code","execution_count":null,"metadata":{"id":"2c2lWJ1ej6mp"},"outputs":[],"source":["nama_kendaraan = input(\"Masukkan nama kendaraan: \")\n","jenis_kendaraan = input(\"Masukkan jenis kendaraan: \")\n","cc_kendaraan = input(\"Masukkan cc kendaraan: \")\n","warna_kendaraan = input(\"Masukkan warna kendaraan: \")\n","roda_kendaraan = input(\"Masukkan jumlah roda kendaraan: \")\n","harga_kendaraan = input(\"Masukkan harga kendaraan: \")\n","tipe_kendaraan = input(\"Masukkan tipe kendaraan: \")\n","merk_kendaraan = input(\"Masukkan merk kendaraan: \")\n","\n","# Membuat list awal\n","kendaraan = [nama_kendaraan, jenis_kendaraan, cc_kendaraan, warna_kendaraan, roda_kendaraan]\n","\n","# Menambahkan value\n","kendaraan.extend([harga_kendaraan, tipe_kendaraan])\n","\n","# Menambahkan value setelah 'jenis_kendaraan'\n","index_jenis = kendaraan.index(jenis_kendaraan)\n","kendaraan.insert(index_jenis + 1, merk_kendaraan)\n","\n","print(\"List kendaraan yang dimasukkan:\", kendaraan)"]},{"cell_type":"code","source":["pilih = int(input(\"\"\"Selamat datang diaplikasi menghitung\n","1. untuk menghitung luas persegi\n","2. untuk menghitung luas lingkaran\n","3. untuk menghitung luas segitiga\n","\n","Masukan pilihan anda: \\n\"\"\"))\n","\n","match pilih:\n","  case 1 :\n","    print(\"Kamu memilih 1 untuk luas persegi\")\n","    sisi = int(input(\"masukan sisi persegi\"))\n","    luaspsg = sisi*sisi\n","    print(\"luas persegi yang sisinya\", luaspsg)\n","  case 2 :\n","    print(\"Kamu memilih 2 untuk luas lingkaran\")\n","    jari2 = int(input(\"masukan jari-jari: \"))\n","    luaslk = 3.14 * jari2 * jari2\n","    print(\"luas lingkaran yang jari-jarinya\", jari2, \"adalah\", luaslk)\n","  case 3 :\n","    print(\"Kamu memilih 3 untuk luas segitiga\")\n","    alas = int(input(\"masukan alas segitiga: \"))\n","    tinggi = int(input(\"masukan tinggi segitiga: \"))\n","    luassegitiga = 0.5 * alas * tinggi\n","    print(\"luas segitiga dengan alas\",alas, \"dan tinggi\",tinggi, \"adalah\", luassegitiga)\n","  case _:\n","    print(\"Anda Salah Pilih\")"],"metadata":{"id":"ZuEqXUHfxzl4"},"execution_count":null,"outputs":[]}],"metadata":{"colab":{"provenance":[],"authorship_tag":"ABX9TyMFra7/IStE/iEZ0yf4mxia"},"kernelspec":{"display_name":"Python 3","name":"python3"},"language_info":{"name":"python"}},"nbformat":4,"nbformat_minor":0}
+print('\n=====No 1=====')
+nama_kendaraan = input("Masukkan nama kendaraan: ")
+jenis_kendaraan = input("Masukkan jenis kendaraan: ")
+cc_kendaraan = input("Masukkan cc kendaraan: ")
+warna_kendaraan = input("Masukkan warna kendaraan: ")
+roda_kendaraan = input("Masukkan jumlah roda kendaraan: ")
+harga_kendaraan = input("Masukkan harga kendaraan: ")
+tipe_kendaraan = input("Masukkan tipe kendaraan: ")
+merk_kendaraan = input("Masukkan merk kendaraan: ")
+
+# Membuat list awal
+kendaraan = [nama_kendaraan, jenis_kendaraan, cc_kendaraan, warna_kendaraan, roda_kendaraan]
+
+# Menambahkan value
+kendaraan.extend([harga_kendaraan, tipe_kendaraan])
+
+# Menambahkan value setelah 'jenis_kendaraan'
+index_jenis = kendaraan.index(jenis_kendaraan)
+kendaraan.insert(index_jenis + 1, merk_kendaraan)
+
+print("List kendaraan yang dimasukkan:", kendaraan)
+
+print('\n=====No 2=====')
+pilih = int(input("""Selamat datang diaplikasi menghitung
+1. untuk menghitung luas persegi
+2. untuk menghitung luas lingkaran
+3. untuk menghitung luas segitiga
+
+Masukan pilihan anda: \n"""))
+
+match pilih:
+  case 1 :
+    print("Kamu memilih 1 untuk luas persegi")
+    sisi = int(input("masukan sisi persegi"))
+    luaspsg = sisi*sisi
+    print("luas persegi yang sisinya", luaspsg)
+  case 2 :
+    print("Kamu memilih 2 untuk luas lingkaran")
+    jari2 = int(input("masukan jari-jari: "))
+    luaslk = 3.14 * jari2 * jari2
+    print("luas lingkaran yang jari-jarinya", jari2, "adalah", luaslk)
+  case 3 :
+    print("Kamu memilih 3 untuk luas segitiga")
+    alas = int(input("masukan alas segitiga: "))
+    tinggi = int(input("masukan tinggi segitiga: "))
+    luassegitiga = 0.5 * alas * tinggi
+    print("luas segitiga dengan alas",alas, "dan tinggi",tinggi, "adalah", luassegitiga)
+  case _:
+    print("Anda Salah Pilih")
