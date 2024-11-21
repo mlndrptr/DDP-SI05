@@ -1,3 +1,4 @@
+
 print('\n=====No 1=====')
 nama_kendaraan = input("Masukkan nama kendaraan: ")
 jenis_kendaraan = input("Masukkan jenis kendaraan: ")
